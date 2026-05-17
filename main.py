@@ -4,3 +4,4 @@ if __name__ == '__main__':
     print_hi('PyCharm')
 #баарвараыдвррадврл
 print("test")
+print("Yera Roma Islam")
