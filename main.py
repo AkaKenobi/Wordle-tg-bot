@@ -5,4 +5,4 @@ if __name__ == '__main__':
 #баарвараыдвррадврл
 print("test")
 print("Yera Roma Islam")
-print("Yera Roma 45764965мммсчм894Islam((пшк")
+print("Yera Roma 45764965мммсчм894Islam")
