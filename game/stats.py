@@ -5,6 +5,7 @@ from typing import Dict
 
 from config import STATS_FILE
 
+
 @dataclass
 class PlayerStats:
     games_played: int = 0
