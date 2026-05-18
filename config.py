@@ -2,5 +2,5 @@ BOT_TOKEN = "8870828107:AAEZFx_AIxffW7KP8I4D9SFOhCqcPOo3h7c"
 
 MAX_ATTEMPTS = 6
 WORD_LENGTH = 5
-WORDS_FILE = "data/words.txt"
+WORDS_FILE = "data/words"
 STATS_FILE = "data/stats.json"
