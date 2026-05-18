@@ -17,11 +17,9 @@ def load_words() -> List[str]:
     except FileNotFoundError:
         return _fallback_words()
 
-
 def _fallback_words() -> List[str]:
     return ["CRANE", "SLATE", "AUDIO", "RAISE", "AROSE",
             "STERN", "TRACE", "STARE", "SNARE", "IRATE"]
-
 
 @dataclass
 class GuessResult:
@@ -31,14 +29,33 @@ class GuessResult:
     def as_string(self) -> str:
         return "".join(self.pattern) + f"  `{self.word}`"
 
-@dataclass
-class WordleGame:
+class BaseGame:
 
-    secret: str
-    max_attempts: int = MAX_ATTEMPTS
-    attempts: List[GuessResult] = field(default_factory=list)
-    finished: bool = False
-    won: bool = False
+    def __init__(self, secret: str, max_attempts: int):
+        self.secret = secret
+        self.max_attempts = max_attempts
+        self.finished = False
+        self.won = False
+
+    def check_guess(self, guess: str):
+        raise NotImplementedError("Subclasses must implement check_guess()")
+
+    def board_as_text(self) -> str:
+        raise NotImplementedError("Subclasses must implement board_as_text()")
+
+    @property
+    def attempts_left(self) -> int:
+        raise NotImplementedError
+
+    @property
+    def attempts_used(self) -> int:
+        raise NotImplementedError
+
+
+class WordleGame(BaseGame):
+    def __init__(self, secret: str, max_attempts: int = MAX_ATTEMPTS):
+        super().__init__(secret, max_attempts)
+        self.attempts: List[GuessResult] = []
 
     @classmethod
     def new_game(cls, word_list: List[str]) -> "WordleGame":

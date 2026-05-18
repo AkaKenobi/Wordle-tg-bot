@@ -1,6 +1,34 @@
 {
   "1103295823": {
+    "games_played": 2,
+    "games_won": 0,
+    "current_streak": 0,
+    "best_streak": 0,
+    "total_attempts": 0
+  },
+  "1437442566": {
     "games_played": 1,
+    "games_won": 0,
+    "current_streak": 0,
+    "best_streak": 0,
+    "total_attempts": 0
+  },
+  "1078453606": {
+    "games_played": 2,
+    "games_won": 1,
+    "current_streak": 0,
+    "best_streak": 1,
+    "total_attempts": 6
+  },
+  "5270443622": {
+    "games_played": 6,
+    "games_won": 2,
+    "current_streak": 2,
+    "best_streak": 2,
+    "total_attempts": 9
+  },
+  "1353277614": {
+    "games_played": 2,
     "games_won": 0,
     "current_streak": 0,
     "best_streak": 0,
